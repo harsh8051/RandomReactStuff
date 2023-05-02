@@ -1,0 +1,12 @@
+.mainContainer{
+    width: 50%;
+    height: 80vh;
+    background-color: aqua;
+}
+
+.box{
+    height: 50px;
+    width: 50px;
+    background-color: blueviolet;
+
+}
