@@ -1,0 +1,28 @@
+{
+  "name": "randomreactstuff",
+  "version": "1.0.0",
+  "description": "This is project to work woth random and unrelatated stuff in react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harsh8051/RandomReactStuff.git"
+  },
+  "keywords": [
+    "React",
+    "node",
+    "JS"
+  ],
+  "author": "Harshal Dhone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harsh8051/RandomReactStuff/issues"
+  },
+  "homepage": "https://github.com/harsh8051/RandomReactStuff#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
