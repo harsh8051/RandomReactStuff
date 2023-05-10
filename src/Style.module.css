@@ -1,0 +1,6 @@
+.main {
+  display: grid;
+  place-items: center;
+  margin: auto;
+  background: linear-gradient(45deg, rgb(86, 86, 247), rgb(192, 100, 57));
+}

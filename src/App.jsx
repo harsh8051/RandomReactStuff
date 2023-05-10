@@ -1,10 +1,10 @@
 import React from "react";
 //import MainWindow from "./DraggableComponentDemo/MainWindow";
-import MainWindow from "./FileHandling/PdfFiles/MainWindow.jsx";
-
+import MainWindow from "./LoanCalculater/MainWindow";
+import Main from './Style.module.css'
 export default function App() {
   return (
-    <div>
+    <div className={Main.main}>
       <h1>Test app real time update</h1>
       <MainWindow/>
     </div>
