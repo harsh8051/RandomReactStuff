@@ -1,10 +1,11 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
-import TextField from '@mui/material/TextField';
+import TextField from "@mui/material/TextField";
+import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Unstable_Grid2";
-
+import CollapsibleTable from './CollapsibleTable'
+import SpanningTable from "./SpanningTable";
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -25,11 +26,11 @@ export default function BasicGrid() {
         <Grid xs={4}>
           <Item>xs=4</Item>
         </Grid>
-        <Grid xs={4}>
-          
-        </Grid>
+        <Grid xs={4}></Grid>
         <Grid xs={12}>
-          <Item>xs=8</Item>
+          <Item>
+            <SpanningTable/>
+          </Item>
         </Grid>
       </Grid>
     </Box>
