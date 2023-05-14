@@ -37,7 +37,7 @@ const invoiceTotal = invoiceTaxes + invoiceSubtotal;
             <TableCell align="center" colSpan={4}>
               Details
             </TableCell>
-            <TableCell align="right">Price</TableCell>
+            <TableCell align="right">Debit</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>Date</TableCell>
@@ -49,12 +49,12 @@ const invoiceTotal = invoiceTaxes + invoiceSubtotal;
         </TableHead>
         <TableBody>
           {props.rows.map((row) => (
-            <TableRow key={row.desc}>
-              <TableCell>{row.desc}</TableCell>
-              <TableCell align="right">{row.qty}</TableCell>
-              <TableCell align="right">{row.unit}</TableCell>
-              <TableCell align="right">{row.unit}</TableCell>
-              <TableCell align="right">{ccyFormat(row.price)}</TableCell>
+            <TableRow key={row.date}>
+              <TableCell>{row.date}</TableCell>
+              <TableCell align="right">{row.amount}</TableCell>
+              <TableCell align="right">{row.interest}</TableCell>
+              <TableCell align="right">{row.installment}</TableCell>
+              <TableCell align="right">{ccyFormat(row.sum)}</TableCell>
             </TableRow>
           ))}
 

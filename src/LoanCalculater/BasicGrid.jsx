@@ -13,29 +13,21 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-function priceRow(qty, unit) {
-  return qty * unit;
-}
-
-function createRow(desc, qty, unit) {
-  const price = priceRow(qty, unit);
-  return { desc, qty, unit, price };
+function createRow(date, amount) {
+  const interest = (amount * 12) / 100;
+  const installment = 0;
+  const sum = amount + interest;
+  return { date, amount, interest, installment, sum };
 }
 
 export default function BasicGrid() {
-  const rows = [
-    createRow("Paperclips (Box)", 100, 1.15),
-    createRow("Paper (Case)", 10, 45.99),
-    createRow("Waste Basket", 2, 17.99),
-  ];
+  const rows = [createRow("t10/03/2021", 100)];
 
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid xs={4}>
-          <Item>
-
-          </Item>
+          <Item></Item>
         </Grid>
         <Grid xs={4}>
           <Item>
