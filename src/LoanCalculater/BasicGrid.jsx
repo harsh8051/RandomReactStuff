@@ -5,6 +5,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import SpanningTable from "./SpanningTable";
+import DateComponent from './Component/DateComponent'
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -21,13 +22,13 @@ function createRow(date, amount) {
 }
 
 export default function BasicGrid() {
-  const rows = [createRow("t10/03/2021", 100)];
+  const rows = [createRow("10/03/2021", 100)];
 
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid xs={4}>
-          <Item></Item>
+          <Item><DateComponent/></Item>
         </Grid>
         <Grid xs={4}>
           <Item>
