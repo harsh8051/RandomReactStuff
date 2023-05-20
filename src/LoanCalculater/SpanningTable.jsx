@@ -1,11 +1,11 @@
-import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import * as React from "react";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
 
 const TAX_RATE = 0.07;
 
@@ -13,21 +13,14 @@ function ccyFormat(num) {
   return `${num.toFixed(2)}`;
 }
 
-
-
 function subtotal(items) {
   return items.map(({ price }) => price).reduce((sum, i) => sum + i, 0);
 }
 
-
-
-
-
 export default function SpanningTable(props) {
-
   const invoiceSubtotal = subtotal(props.rows);
-const invoiceTaxes = TAX_RATE * invoiceSubtotal;
-const invoiceTotal = invoiceTaxes + invoiceSubtotal;
+  const invoiceTaxes = TAX_RATE * invoiceSubtotal;
+  const invoiceTotal = invoiceTaxes + invoiceSubtotal;
 
   return (
     <TableContainer component={Paper}>
@@ -58,15 +51,18 @@ const invoiceTotal = invoiceTaxes + invoiceSubtotal;
             </TableRow>
           ))}
 
-          
-          <TableRow>
-            <TableCell>Tax</TableCell>
-            <TableCell align="right">{`${(TAX_RATE * 100).toFixed(0)} %`}</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceTaxes)}</TableCell>
+          <TableRow>  
+            <TableCell rowSpan={3} colSpan={3} />
+            <TableCell ></TableCell>
+            <TableCell align="right"></TableCell>
+          </TableRow>
+          <TableRow>  
+            <TableCell >Interest Paid</TableCell>
+            <TableCell align="right">1000</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell colSpan={2}>Total</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceTotal)}</TableCell>
+            <TableCell >Total</TableCell>
+            <TableCell align="right">1200</TableCell>
           </TableRow>
         </TableBody>
       </Table>
