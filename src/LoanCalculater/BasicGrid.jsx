@@ -5,7 +5,9 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import SpanningTable from "./SpanningTable";
-import DateComponent from './Component/DateComponent'
+import DateComponent from "./Component/Input/DateComponent";
+import SelectLabels from "./Component/Input/SelectLabels";
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -28,7 +30,10 @@ export default function BasicGrid() {
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid xs={4}>
-          <Item><DateComponent/></Item>
+          <Item>
+            <DateComponent />
+            <SelectLabels />
+          </Item>
         </Grid>
         <Grid xs={4}>
           <Item>
