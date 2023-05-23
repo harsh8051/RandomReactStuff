@@ -7,6 +7,7 @@ import Paper from "@mui/material/Paper";
 import SpanningTable from "./SpanningTable";
 import DateComponent from "./Component/Input/DateComponent";
 import SelectLabels from "./Component/Input/SelectLabels";
+import InputLabel from "@mui/material/InputLabel";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -28,20 +29,37 @@ export default function BasicGrid() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
+ 
+
       <Grid container spacing={2}>
-        <Grid xs={4}>
+      <Grid item xs={12}>
+          <Grid container spacing={2}>
+            <Grid item xs={6} textAlign="right">
+              <Item>
+                <InputLabel>Date:</InputLabel>
+                <DateComponent />
+              </Item>
+            </Grid>
+            <Grid item xs={6} textAlign="left">
+              <Item>
+                <InputLabel>Text:</InputLabel>
+                <TextField id="filled-basic" label="Filled" variant="filled" />
+              </Item>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid  item xs={12}>
           <Item>
             <DateComponent />
-            <SelectLabels />
           </Item>
-        </Grid>
-        <Grid xs={4}>
           <Item>
             <TextField id="filled-basic" label="Filled" variant="filled" />
           </Item>
+          <Item>
+            <SelectLabels />
+          </Item>
         </Grid>
-        <Grid xs={4}></Grid>
-        <Grid xs={12}>
+        <Grid item xs={12}>
           <Item>
             <SpanningTable rows={rows} />
           </Item>
