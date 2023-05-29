@@ -1,6 +1,6 @@
 import React from "react";
 //import MainWindow from "./DraggableComponentDemo/MainWindow";
-import MainWindow from "./LoanCalculater/MainWindow";
+import MainWindow from "./TextDraft/MainWindow";
 import Main from './Style.module.css'
 export default function App() {
   return (

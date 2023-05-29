@@ -1,0 +1,26 @@
+.rich-text-editor {
+    margin: 100px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-block;
+    width: 400px;
+    background-color: #ccc;
+  }
+  
+  .format-controls {
+    margin-bottom: 5px;
+  }
+  
+  .format-controls button {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .editor {
+    border: 1px solid #ccc;
+    min-height: 200px;
+    padding: 5px;
+    overflow-y: auto;
+    background-color: white;
+  }
+  
