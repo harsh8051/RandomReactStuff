@@ -23,4 +23,8 @@
     overflow-y: auto;
     background-color: white;
   }
+  strong,em{
+    margin: 5px;
+    padding: 5px;
+  }
   
