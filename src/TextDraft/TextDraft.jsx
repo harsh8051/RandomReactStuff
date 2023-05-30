@@ -10,7 +10,7 @@ export default function TextDraft() {
   return (
     <div className="rich-text-editor">
       <div className="format-controls">
-        <button  onClick={() => handleFormat("italic")}>
+        <button className="toggle-button" onClick={() => handleFormat("italic")}>
         <label className="switch">
         <input type="checkbox"></input>
         <span className="slider round"></span>
