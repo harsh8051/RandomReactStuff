@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import './RichTextEditor.css';
+import React, { useRef } from "react";
+import "./RichTextEditor.css";
 
 export default function TextDraft() {
   const editorRef = useRef(null);
@@ -10,10 +10,16 @@ export default function TextDraft() {
   return (
     <div className="rich-text-editor">
       <div className="format-controls">
-        <button onClick={() => handleFormat("bold")}>
+        <button  onClick={() => handleFormat("italic")}>
+        <label className="switch">
+        <input type="checkbox"></input>
+        <span className="slider round"></span>
+        </label>
+        </button>
+        <button className="square-button" onClick={() => handleFormat("bold")}>
           <strong>B</strong>
         </button>
-        <button onClick={() => handleFormat("italic")}>
+        <button className="square-button" onClick={() => handleFormat("italic")}>
           <em>I</em>
         </button>
       </div>
