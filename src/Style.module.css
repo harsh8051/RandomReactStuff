@@ -1,8 +1,9 @@
 .main {
+  flex: 1;
   display: grid;
   place-items: center;
-  margin: auto;
-  height: 100vh;
+  height: 100%;
+  width: 80%;
   background: linear-gradient(45deg, rgb(86, 86, 247), rgb(192, 100, 57));
 }
 header{
@@ -12,17 +13,13 @@ header{
 }
 /* Style the side navigation */
 .sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
+  height: match-parent;
+  width: 20%;
   background-color: #111;
-  overflow-x: hidden;
 }
-
-
+.container{
+  display: flex;
+}
 /* Side navigation links */
 .sidenav a {
   color: white;

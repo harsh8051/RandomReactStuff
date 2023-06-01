@@ -5,21 +5,22 @@ import TextWindow from "./TextDraft/MainWindow";
 import Main from "./Style.module.css";
 export default function App() {
   return (
-    <>
-      <header className={Main.header}>
-        <h1>Test app real time update</h1>
-      </header>
-      <div className={Main.sidenav}>
+    <div className={Main.container}>
+    <div className={Main.sidenav}>
         <a href="drag">Drag</a>
         <a href="#">Link</a>
         <a href="#">Link</a>
       </div>
       <div className={Main.main}>
+      <header className={Main.header}>
+        <h1>Test app real time update</h1>
+      </header>
+      
         <Routes>
           <Route path="/" element={<TextWindow />} />
           <Route path="/drag" element={<DraggableWindow />} />
         </Routes>
       </div>
-    </>
+    </div>
   );
 }
