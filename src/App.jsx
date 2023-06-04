@@ -17,7 +17,7 @@ export default function App() {
     try {
       const response = await fetch('/data/applist.json');
       const jsonData = await response.json();
-      console.table(jsonData)
+      //console.table(jsonData)
       setData(jsonData);
     } catch (error) {
       console.error('Error fetching data:', error);

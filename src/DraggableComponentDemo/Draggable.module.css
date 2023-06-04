@@ -1,6 +1,7 @@
 .mainContainer{
-    width: 50%;
-    height: 60vh;
+    position: relative;
+    width: 720px;
+    height: 300px;
     background-color: aqua;
     margin: 5vh;
 }
@@ -11,3 +12,14 @@
     background-color: blueviolet;
 
 }
+
+.draggable {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: grab;
+  }
+  
+  .dragging {
+    cursor: grabbing;
+  }
