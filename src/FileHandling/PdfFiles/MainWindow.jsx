@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import { Page, Document } from 'react-pdf';
 
-export default function MainWindow() {
+export default function FileHandler() {
   const [fileContent, setFileContent] = useState(null);
   const [numPages, setNumPages] = useState(null);
 

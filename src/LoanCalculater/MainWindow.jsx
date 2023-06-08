@@ -2,7 +2,7 @@ import React from "react";
 import Container from "@mui/material/Container";
 import BasicGrid from "./BasicGrid";
 
-export default function MainWindow() {
+export default function LoanCalculater() {
   return (
     <Container 
     sx={{
